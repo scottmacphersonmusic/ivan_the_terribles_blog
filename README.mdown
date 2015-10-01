@@ -9,6 +9,9 @@ Before improvements the Post index page of this app took between 70 and 120 seco
 - Eager load the comments' replies in the PostsController show action.
 - Add caching to the main content of the Post show and index views.
 
+#### Performance Analysis by [LoadImpact](https://loadimpact.com/)
+![performance analysis](/app/assets/images/load_impact.png)
+
 ### Contributing
 1. Fork It
 2. Create your feature branch (git checkout -b my-new-feature)
