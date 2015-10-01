@@ -22,6 +22,7 @@ end
 gem 'rack-mini-profiler'
 gem 'jquery-rails'
 gem 'faker'
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -39,7 +40,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
-  gem 'kaminari'
 end
 
 gem 'rails_12factor', group: :production
