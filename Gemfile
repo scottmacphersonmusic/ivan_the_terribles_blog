@@ -19,6 +19,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'rack-mini-profiler'
 gem 'jquery-rails'
 gem 'faker'
 
@@ -37,6 +38,8 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'kaminari'
 end
 
 # To use ActiveModel has_secure_password
