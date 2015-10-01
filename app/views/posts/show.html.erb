@@ -2,13 +2,35 @@
 
 <p>
   <b>Title:</b>
-  <%= @post.title %>
+  <h2><b><%= @post.title %></b></h2>
 </p>
 
 <p>
   <b>Body:</b>
   <%= @post.body %>
 </p>
+
+<br/>
+
+<% cache do %>
+<% count = 1 %>
+<% @comments.each do |comment| %>
+  <p><b>Comment <%= count %>:</b></p>
+  <p><%= comment.body %></p><br/>
+
+  <% r = 1 %>
+  <% comment.replies.each do |reply| %>
+    <p>Reply <%= r %>:</p>
+    <p><%= reply.body %></p>
+    <% r += 1 %>
+  <% end %>
+
+  <hr/>
+  <% count += 1 %>
+<% end %>
+<% end %>
+
+<%= paginate @comments %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
