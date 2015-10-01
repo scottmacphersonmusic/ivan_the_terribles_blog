@@ -1,8 +1,15 @@
 <h1>Ivan the Terrible's Blog</h1>
 
-<section class="blog">
-  <%= render @posts %>
-</section>
+<% cache do %>
+  <section class="blog">
+    <% @posts.each do |post| %>
+      <h2><strong>Post <%= post.id.to_s + ": " + post.title %></strong></h2>
+      <p><%= post.body %></p><br/>
+      <%= link_to "View Comments", post %>
+      <hr/>
+   <% end %>
+  </section>
+<% end %>
 
 <br />
 
