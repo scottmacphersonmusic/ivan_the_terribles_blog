@@ -1,9 +1,32 @@
-# My New Blog!
+# Ivan's Horrible Blog
+By [Scott Macpherson](https://github.com/scottmacphersonmusic)
+### Description
+A once horrible blog emerges from its cocoon.  This new and improved blog loads much quicker and provides a smoother user interface.
+### Improvements
+Before improvements the Post index page of this app took between 70 and 120 seconds to load; it now loads in under 500 ms, and here's how:
+- Show just the title and body of all posts on the index page - include link to view comments
+- In the Post show view, use pagination to display only 20 comments and their associated replies at once.  Provide links to view more pages of comments.
+- Eager load the comments' replies in the PostsController show action.
+- Add caching to the main content of the Post show and index views.
 
-I've got a lot to say, and now I have a place to say it!!!!!
+#### Performance Analysis by [LoadImpact](https://loadimpact.com/)
+![performance analysis](/app/assets/images/load_impact.png)
 
-Read all my amazing posts!!!!! You can load them into the app with: `rake load:blog`
+### Contributing
+1. Fork It
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+### Credit
+[RailsCast: Eager Loading](http://railscasts.com/episodes/22-eager-loading-revised?autoplay=true)
 
-Since I know you want to read them all, I designed my page to show EVERYTHING on the front page of the site!!!!!
+[RailsCast: MiniProfiler](http://railscasts.com/episodes/368-miniprofiler)
 
-I know it is a little slow (but totes worth it!!!!)... _Do you know how I can make it faster?_
+[RailsCast: Bullet](http://railscasts.com/episodes/372-bullet)
+
+[Rails Guide: Caching with Rails](http://guides.rubyonrails.org/caching_with_rails.html#action-caching)
+
+[Kaminari gem](https://github.com/amatsuda/kaminari)
+
+This README was edited at [dillinger.io](dillinger.io)

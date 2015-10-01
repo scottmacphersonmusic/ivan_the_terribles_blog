@@ -19,8 +19,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'rack-mini-profiler'
 gem 'jquery-rails'
 gem 'faker'
+gem 'kaminari'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -37,7 +39,10 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'bullet'
 end
+
+gem 'rails_12factor', group: :production
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

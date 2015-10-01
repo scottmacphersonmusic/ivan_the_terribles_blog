@@ -21,6 +21,8 @@ module IvanTheTerriblesBlog
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.action_controller.perform_caching = true
+
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
@@ -68,6 +70,8 @@ module IvanTheTerriblesBlog
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
