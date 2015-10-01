@@ -1,5 +1,7 @@
 <h1>Ivan the Terrible's Blog</h1>
 
+<%= link_to 'New Post', new_post_path %>
+
 <% cache do %>
   <section class="blog">
     <% @posts.each do |post| %>

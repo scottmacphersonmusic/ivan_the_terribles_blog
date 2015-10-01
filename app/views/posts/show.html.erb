@@ -10,8 +10,14 @@
   <%= @post.body %>
 </p>
 
-<br/>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
 
+<br/>
+<hr/>
+<br/>
+<%= paginate @comments %>
+<br/>
 <% cache do %>
 <% count = 1 %>
 <% @comments.each do |comment| %>
@@ -30,8 +36,10 @@
 <% end %>
 <% end %>
 
+<br/>
+
 <%= paginate @comments %>
 
-
+<br/><hr/>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
