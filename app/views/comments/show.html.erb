@@ -1,15 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Body:</b>
-  <%= @comment.body %>
-</p>
-
-<p>
   <b>Post:</b>
   <%= @comment.post %>
 </p>
 
+<p>
+  <b>Body:</b>
+  <%= @comment.body %>
+</p>
+
+<br/>
+
+<% count = 1 %>
+<% @replies.each do |reply| %>
+  <p><b>Reply <%= count %>:</b></p>
+  <p><%= reply.body %></p>
+<% end %>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
