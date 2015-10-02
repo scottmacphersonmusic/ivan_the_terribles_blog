@@ -25,4 +25,4 @@ __eclim_temp_Vagrantfile
 config/application.yml
 brakeman_report.html
 
-/config/initializers/secret_token.rb
+.env
