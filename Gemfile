@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.13'
+gem 'rails', '3.2.19'
 
 gem 'pg'
 gem 'kaminari'
@@ -29,4 +29,5 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman', :require => false
 end
