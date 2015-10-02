@@ -7,7 +7,7 @@ class PostsController < ApplicationController
       .search(params[:search])
       .page(params[:page])
       .per(15)
-    logger.info("Params search is #{params[:search]}")
+    logger.info(["Params search is ?", "%#{params[:search]}%"])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
