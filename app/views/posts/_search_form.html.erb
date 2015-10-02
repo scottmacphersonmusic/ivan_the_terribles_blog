@@ -16,6 +16,8 @@
   </p>
 <% end %>
 </section>
-<%= content_tag :div, "data-#{params[:status]}" => true do %>
-  Now showing <%= params[:status] %> results below:
-<% end -%>
+
+<% status = params[:status] %>
+<div data-<%= status %>:=true>
+  Now showing <%= status %> results below:
+</div>
